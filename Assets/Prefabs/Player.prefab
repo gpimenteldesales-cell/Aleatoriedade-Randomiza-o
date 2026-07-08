@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 15604969036989477}
   - component: {fileID: 7839009405271016264}
   - component: {fileID: 5452134628194825650}
+  - component: {fileID: 4963146307857332115}
+  - component: {fileID: 2925285327243498858}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -114,3 +116,119 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4963146307857332115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6456719478836904384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c84a4ece490cdd4a9008a0c65e2dee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovementPlayer
+  playerMove:
+    m_Name: Player Move
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 65325a1c-f033-436a-a5c8-2b5ce7491280
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 3D Vector
+      m_Id: f350e39d-7cd9-46a9-88d2-1f9d05558bca
+      m_Path: 3DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Move
+      m_Flags: 4
+    - m_Name: up
+      m_Id: 47e31f86-0815-44ce-976e-86f9d60045ce
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Move
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 3cd33113-3cd5-45a7-bfd9-3d79e8f72340
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Move
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 25da631c-318d-42d6-831b-a88be50d33fc
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Move
+      m_Flags: 8
+    - m_Name: right
+      m_Id: 94cc4a9e-d9ff-4dbd-9bac-3db1ad31181c
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Move
+      m_Flags: 8
+    - m_Name: forward
+      m_Id: 910aafa2-4daa-47d3-a512-80a7072e6fe5
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Move
+      m_Flags: 8
+    - m_Name: backward
+      m_Id: e89a2fc3-270f-438a-83cf-26a61446acf9
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Move
+      m_Flags: 8
+    m_Flags: 0
+  playerJump:
+    m_Name: Player Jump
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f782316a-8470-41d1-8719-1ad01886e017
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  playerVelocity: 5
+  playerJumpHeight: 10
+  isJumping: 0
+--- !u!54 &2925285327243498858
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6456719478836904384}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
